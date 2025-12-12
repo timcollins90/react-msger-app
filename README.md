@@ -30,12 +30,12 @@ A real-time chat application inspired by (AIM). Built with React hooks and Socke
 * npm or yarn
 
 * ### 1. Clone the repository 
-# git clone 
+* git clone 
 * cd msger-chat
-* 
+  
 * ###  2. Install Dependencies
 * npm install
-* 
+  
 * ### 3. Running the Application
 * ### Run both the backend server and the React frontend.
 * Start the Backend:
