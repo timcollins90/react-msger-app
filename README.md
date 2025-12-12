@@ -6,6 +6,7 @@ A real-time chat application inspired by (AIM). Built with React hooks and Socke
 
 * **Real-Time Communication:** Instant message delivery using WebSockets.
 * **Room System:**
+	* Live Preview: https://timothyjosephcollins.com/msg/
     * Create unique, ephemeral chat rooms.
     * Join existing rooms via Room ID.
     * **Deep Linking:** Share a specific URL (e.g., `/?room=123`) to invite friends directly.
@@ -20,7 +21,7 @@ A real-time chat application inspired by (AIM). Built with React hooks and Socke
 
 **Backend:**
 * Node.js
-* Socket.io
+* Socket.io 
 * Express (for API routes)
 
 ## 🚀 Installation & Setup
@@ -42,6 +43,8 @@ A real-time chat application inspired by (AIM). Built with React hooks and Socke
 * node server.js
 * Start the Frontend:
 * npm start
+*
+
 
 
 

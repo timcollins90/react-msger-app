@@ -1,0 +1,253 @@
+:root {
+  --win-grey: #c0c0c0;
+  --win-blue: #000080;
+  --win-text: #000000;
+  --win-white: #ffffff;
+  --win-border-light: #dfdfdf;
+  --win-border-dark: #808080;
+}
+
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000; 
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  overflow: hidden; 
+  position: fixed;  
+  top: 0;
+  left: 0;
+}
+
+
+.App {
+  display: flex;       
+  height: 100dvh;      
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.aim-window {
+  margin: auto; 
+  
+  background-color: var(--win-grey);
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff; 
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  
+  width: 100%;
+  max-width: 600px;
+  
+  height: 100%;
+  max-height: 800px;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  .aim-window {
+      position: fixed !important; 
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      
+      width: 100% !important;
+      height: 100% !important;
+      
+      max-width: none !important;
+      max-height: none !important;
+      margin: 0 !important;
+      border: none;
+      box-shadow: none;
+      z-index: 9999;
+  }
+}
+
+.title-bar {
+  background: var(--win-blue);
+  padding: 4px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  height: 25px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.title-controls button {
+  background: var(--win-grey);
+  border: 1px solid;
+  border-color: #fff #808080 #808080 #fff;
+  font-size: 10px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  margin-left: 2px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  padding: 5px;
+  gap: 5px;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.chat-history {
+  flex: 1;
+  background: white;
+  border: 2px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  overflow-y: scroll;
+  padding: 5px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.buddy-list {
+  width: 110px;
+  background: white;
+  border: 2px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 400px) {
+    .buddy-list {
+        width: 85px;
+        font-size: 11px;
+    }
+}
+
+.buddy-header {
+  background: #ddd;
+  padding: 2px;
+  font-size: 11px;
+  border-bottom: 1px solid #999;
+  text-align: center;
+      color: #000;
+}
+
+.buddy-item {
+  display: flex;
+  align-items: center;
+  padding: 2px 4px;
+  font-size: 12px;
+  gap: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+      color: #000;
+}
+
+.buddy-icon {
+  color: #fbd403;
+  font-size: 14px;
+}
+
+.message-line {
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+
+.msg-author {
+  font-weight: bold;
+  color: blue;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.msg-author.me {
+  color: red;
+}
+
+.msg-text {
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+
+.input-area {
+  padding: 5px;
+  display: flex;
+  gap: 5px;
+  background: var(--win-grey);
+  padding-bottom: max(5px, env(safe-area-inset-bottom));
+  flex-shrink: 0;
+}
+
+.aim-textarea {
+  flex: 1;
+  height: 40px;
+  border: 2px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 4px;
+  resize: none;
+  outline: none;
+}
+
+.aim-send-btn {
+  width: 60px;
+  height: 40px;
+  background: var(--win-grey);
+  border: 2px solid;
+  border-color: #fff #000 #000 #fff;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.aim-send-btn:active {
+  border-color: #000 #fff #fff #000;
+  transform: translateY(1px);
+}
+
+
+.login-window-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.login-window {
+    background: var(--win-grey);
+    border: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    width: 300px;
+}
+
+.login-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-input {
+  padding: 4px;
+  font-size: 14px;
+  border: 2px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  outline: none;
+}
