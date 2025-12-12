@@ -44,17 +44,4 @@ A real-time chat application inspired by (AIM). Built with React hooks and Socke
 * npm start
 
 
-*   📂 Project Structure
-* Plaintext
 
-*/
-* ├── server.js           # Main Node/Socket.io server entry point
-* ├── package.json        # Backend dependencies
-* └── client/             # React Frontend
-*    ├── public/
-*    ├── src/
-*    │   ├── App.js      # Main component logic
-*    │   ├── App.css     # Styles (Layout, Retro UI, Animations)
-*    │   ├── index.js    # React DOM entry
-*    │   └── setupProxy.js # (Optional) Proxy configuration
-*    └── package.json    # Frontend dependencies
